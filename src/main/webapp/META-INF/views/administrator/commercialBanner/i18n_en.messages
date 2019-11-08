@@ -1,0 +1,9 @@
+administrator.banner.commercial.label.picture = Picture
+administrator.banner.commercial.label.slogan = Slogan 
+
+administrator.banner.commercial.form.label.picture = Picture:
+administrator.banner.commercial.form.label.slogan = Slogan:
+administrator.banner.commercial.form.label.targetUrl = Picture URL:
+administrator.banner.commercial.form.label.creditCard = Credit card number:
+
+administrator.banner.commercial.form.button.return = Return
