@@ -13,7 +13,9 @@ import acme.framework.entities.Administrator;
 import acme.framework.services.AbstractListService;
 
 @Service
-public class AdministratorInvestorRecordListService implements AbstractListService<Administrator, InvestorRecord> {
+public class AdministratorInvestorRecordListTopService implements AbstractListService<Administrator, InvestorRecord> {
+
+	// Internal state ---------------------------------------------------------
 
 	@Autowired
 	AdministratorInvestorRecordRepository repository;
@@ -41,7 +43,8 @@ public class AdministratorInvestorRecordListService implements AbstractListServi
 	public Collection<InvestorRecord> findMany(final Request<InvestorRecord> request) {
 		assert request != null;
 		Collection<InvestorRecord> result;
-		result = this.repository.findManyAll();
+		result = this.repository.findTop();
 		return result;
 	}
+
 }
