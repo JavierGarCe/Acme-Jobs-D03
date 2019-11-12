@@ -86,6 +86,8 @@ master.menu.administrator.listCommercialBanners = Listar banners comerciales
 
 master.menu.administrator.listNonCommercialBanners = Listar banners no comerciales
 
+master.menu.administrator.createNonCommercialBanner = Crear banners no comerciales
+
 master.menu.administrator.chart = Gráfico
 
 # master.menu.provider ########################################################
