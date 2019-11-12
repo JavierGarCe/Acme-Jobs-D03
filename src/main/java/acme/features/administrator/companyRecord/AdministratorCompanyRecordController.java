@@ -22,12 +22,21 @@ public class AdministratorCompanyRecordController extends AbstractController<Adm
 
 	@Autowired
 	private AdministratorCompanyRecordShowService	showService;
+	@Autowired
+	private AdministratorCompanyRecordCreateService	createService;
+	@Autowired
+	private AdministratorCompanyRecordUpdateService	updateService;
+	@Autowired
+	private AdministratorCompanyRecordDeleteService	deleteService;
 
 
 	@PostConstruct
 	private void initialise() {
 		super.addCustomCommand(CustomCommand.LIST_TOP, BasicCommand.LIST, this.listService);
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
+		super.addBasicCommand(BasicCommand.CREATE, this.createService);
+		super.addBasicCommand(BasicCommand.UPDATE, this.updateService);
+		super.addBasicCommand(BasicCommand.DELETE, this.deleteService);
 	}
 
 }

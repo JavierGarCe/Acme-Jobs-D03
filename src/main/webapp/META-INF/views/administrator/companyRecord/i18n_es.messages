@@ -15,4 +15,7 @@ administrator.companyRecord.form.label.inc = Incorporada:
 administrator.companyRecord.form.label.stars = Estrellas:
 administrator.companyRecord.form.label.email = Correo electrónico:
 
+administrator.companyRecord.form.button.update = Actualizar
+administrator.companyRecord.form.button.delete = Borrar
+administrator.companyRecord.form.button.create = Crear
 administrator.companyRecord.form.button.return = Volver

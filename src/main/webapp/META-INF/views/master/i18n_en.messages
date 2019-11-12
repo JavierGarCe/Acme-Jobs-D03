@@ -78,6 +78,7 @@ master.menu.administrator.shutdown = Shut down
 master.menu.administrator.listAnnouncements = List announcements
 master.menu.administrator.listCompanyRecords = List top company records
 master.menu.administrator.listInvestorRecords = List top investor records
+master.menu.administrator.createCompanyRecords = Create a new company record
 
 master.menu.administrator.dashboard = List indicators
 
