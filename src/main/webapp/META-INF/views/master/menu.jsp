@@ -77,10 +77,6 @@
 	  		<acme:menu-suboption code="master.menu.administrator.customization" action="/administrator/customization/list"/>	
     <acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.dashboard" action="/administrator/dashboard/show"/>
-  <acme:menu-separator/>
-			<acme:menu-suboption code="master.menu.administrator.listCompanyRecords" action="/administrator/company-record/list-top"/>
-			<acme:menu-separator/>
-			<acme:menu-suboption code="master.menu.administrator.listInvestorRecords" action="/administrator/investor-record/list-top"/>
 			 <acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.chart" action="/administrator/chart/show-chart"/>
 			 
@@ -98,6 +94,8 @@
 			<acme:menu-suboption code="master.menu.anonymous.listAnnouncements" action="/anonymous/announcement/list-date" />
 			<acme:menu-suboption code="master.menu.anonymous.listCompanyRecords" action="/anonymous/company-record/list" />
 			<acme:menu-suboption code="master.menu.anonymous.listInvestorRecord" action="/anonymous/investor-record/list" />
+			<acme:menu-suboption code="master.menu.anonymous.listTopInvestorRecords" action="/anonymous/investor-record/list-top" />
+			<acme:menu-suboption code="master.menu.anonymous.listTopCompanyRecords" action="/anonymous/company-record/list-top" />
 		</acme:menu-option>
 
 
