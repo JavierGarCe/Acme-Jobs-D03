@@ -17,3 +17,6 @@ administrator.investor-record.form.button.return = Volver
 administrator.investor-record.list.label.name = Nombre:
 administrator.investor-record.list.label.sector = Sector:
 administrator.investor-record.list.label.stars = Estrellas
+
+administrator.investor-record.error.euros-no-match = La moneda debe ser €
+administrator.investor-record.error.positive-no-match = La cantidad de dinero debe ser mayor de 0

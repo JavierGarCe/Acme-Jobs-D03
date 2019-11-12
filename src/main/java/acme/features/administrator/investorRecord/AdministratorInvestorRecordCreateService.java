@@ -62,31 +62,15 @@ public class AdministratorInvestorRecordCreateService implements AbstractCreateS
 
 		Money money = entity.getInvestingStatement();
 
-		if (request.getLocale().getDisplayLanguage().equals("English")) {
-			try {
-				if (money.getAmount() <= 0) {
-					errors.add("investingStatement", "Money amount must be greater than zero");
-				}
-				if (!money.getCurrency().equals("€")) {
-					errors.add("investingStatement", "Money currency must be Euros (€)");
-				}
-			} catch (Exception e) {
-				errors.add("investingStatement", "Format is either '€ amount' or 'amount €'");
-			}
+		if (money != null) {
+			Boolean isEuros, isPositive;
 
-		} else {
-			try {
-				if (money.getAmount() <= 0) {
-					errors.add("investingStatement", "La cantidad de dinero debe ser mayor de 0");
-				}
-				if (!money.getCurrency().equals("€")) {
-					errors.add("investingStatement", "La moneda debe ser Euros (€)");
-				}
-			} catch (Exception e) {
-				errors.add("investingStatement", "El formato debe ser 'cantidad €' o '€ cantidad'");
-			}
+			isEuros = money.getCurrency().equals("€");
+			isPositive = money.getAmount() > 0;
+
+			errors.state(request, isEuros, "investingStatement", "administrator.investor-record.error.euros-no-match");
+			errors.state(request, isPositive, "investingStatement", "administrator.investor-record.error.positive-no-match");
 		}
-
 	}
 
 	@Override
