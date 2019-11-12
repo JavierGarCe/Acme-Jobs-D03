@@ -22,5 +22,5 @@ administrator.investor-record.list.label.name = Name
 administrator.investor-record.list.label.sector = Sector
 administrator.investor-record.list.label.stars = Stars
 
-administrator.investor-record.error.euros-no-match = Currency must be €
+administrator.investor-record.error.euros-no-match = Currency must be EUR
 administrator.investor-record.error.positive-no-match = Money amount must be greater than zero

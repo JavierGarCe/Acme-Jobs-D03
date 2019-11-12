@@ -266,26 +266,26 @@
 	<bean id="investorRecord01" class="acme.entities.investorRecord.InvestorRecord">
 		<property name="name" value="Juan Guzmán"/>
 		<property name="sector" value="Medicina"/>
-		<property name="investingStatement" value="10000 €"/>
+		<property name="investingStatement" value="10000 EUR"/>
 		<property name="stars" value="4"/>
 	</bean>
 	<bean id="investorRecord02" class="acme.entities.investorRecord.InvestorRecord">
 		<property name="name" value="Fran Perejón"/>
 		<property name="sector" value="Automovil"/>
-		<property name="investingStatement" value="40000 €"/>
+		<property name="investingStatement" value="40000 EUR"/>
 		<property name="stars" value="5"/>
 	</bean>
 	<bean id="investorRecord03" class="acme.entities.investorRecord.InvestorRecord">
 		<property name="name" value="Leslie"/>
 		<property name="sector" value="Ingeniería"/>
-		<property name="investingStatement" value="800 €"/>
+		<property name="investingStatement" value="800 EUR"/>
 		<property name="stars" value="1"/>
 	</bean>
 	
 	<bean id="investorRecord04" class="acme.entities.investorRecord.InvestorRecord">
 		<property name="name" value="Leslie"/>
 		<property name="sector" value="Test sector"/>
-		<property name="investingStatement" value="800 €"/>
+		<property name="investingStatement" value="800 EUR"/>
 		<property name="stars" value="1"/>
 	</bean>
 

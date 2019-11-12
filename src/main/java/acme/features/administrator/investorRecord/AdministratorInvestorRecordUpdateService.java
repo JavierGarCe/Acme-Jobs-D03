@@ -68,7 +68,7 @@ public class AdministratorInvestorRecordUpdateService implements AbstractUpdateS
 		if (money != null) {
 			Boolean isEuros, isPositive;
 
-			isEuros = money.getCurrency().equals("€");
+			isEuros = money.getCurrency().equals("EUR");
 			isPositive = money.getAmount() > 0;
 
 			errors.state(request, isEuros, "investingStatement", "administrator.investor-record.error.euros-no-match");
