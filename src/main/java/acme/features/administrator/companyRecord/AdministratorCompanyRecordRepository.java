@@ -15,6 +15,6 @@ public interface AdministratorCompanyRecordRepository extends AbstractRepository
 	@Query("select c from CompanyRecord c where c.id = ?1")
 	CompanyRecord findOneById(int id);
 
-	@Query("select c from CompanyRecord c where c.stars=5")
+	@Query("select c from CompanyRecord c")
 	Collection<CompanyRecord> findManyAll();
 }

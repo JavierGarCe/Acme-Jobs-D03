@@ -78,7 +78,7 @@
     <acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.dashboard" action="/administrator/dashboard/show"/>
   <acme:menu-separator/>
-			<acme:menu-suboption code="master.menu.administrator.listCompanyRecords" action="/administrator/company-record/list-top"/>
+			<acme:menu-suboption code="master.menu.administrator.listCompanyRecords" action="/administrator/company-record/list"/>
 			<acme:menu-suboption code="master.menu.administrator.createCompanyRecords" action="/administrator/company-record/create"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.listInvestorRecords" action="/administrator/investor-record/list-top"/>
