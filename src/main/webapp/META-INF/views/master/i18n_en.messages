@@ -74,7 +74,7 @@ master.menu.authenticated.challenge = List Challenges
 master.menu.administrator = Administrator
 master.menu.administrator.user-accounts = User accounts
 master.menu.administrator.shutdown = Shut down
-
+master.menu.administrator.createAnnouncements = Create announcement
 master.menu.administrator.listAnnouncements = List announcements
 master.menu.administrator.listCompanyRecords = List top company records
 master.menu.administrator.listInvestorRecords = List top investor records
