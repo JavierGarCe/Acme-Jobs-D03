@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import acme.entities.offers.Offer;
 import acme.entities.roles.Consumer;
 import acme.framework.components.Errors;
+import acme.framework.components.HttpMethod;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.datatypes.Money;
@@ -43,6 +44,12 @@ public class ConsumerOfferCreateService implements AbstractCreateService<Consume
 		assert entity != null;
 		assert model != null;
 
+		if (request.isMethod(HttpMethod.GET)) {
+			model.setAttribute("confirm", "false");
+		} else {
+			request.transfer(model, "confirm");
+		}
+
 		request.unbind(entity, model, "title", "deadline", "description", "minReward", "maxReward", "ticker");
 	}
 
@@ -58,6 +65,9 @@ public class ConsumerOfferCreateService implements AbstractCreateService<Consume
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
+
+		Boolean isConfirmed = request.getModel().getBoolean("confirm");
+		errors.state(request, isConfirmed, "confirm", "consumer.requests.error.must-confirm");
 
 		if (entity.getDeadline() != null) {
 			boolean isDeadlineFuture = entity.getDeadline().after(new Date(System.currentTimeMillis()));

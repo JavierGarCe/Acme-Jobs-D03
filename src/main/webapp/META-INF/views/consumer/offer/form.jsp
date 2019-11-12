@@ -16,7 +16,7 @@
 	<acme:form-textbox code="consumer.offer.form.labbel.minReward" path="minReward"/>
 	<acme:form-textbox code="consumer.offer.form.labbel.maxReward" path="maxReward"/>
 	</acme:form-panel>
-	
+	<acme:form-checkbox code="consumer.offer.form.labbel.confirm" path="confirm"/>
 	<acme:form-submit test="${command == 'create'}" code="consumer.offer.form.button.create" action="/consumer/offer/create"/>
 	<acme:form-return code="consumer.offer.form.button.return"/>
 </acme:form>

@@ -24,3 +24,5 @@ consumer.offer.error.not-positive-maxReward= Money amount must be positive
 consumer.offer.error.not-EUR-maxReward= Money currency must be EUR
 consumer.offer.error.not-greater-maxReward=Maximum reward must be greater than minimum reward
 consumer.offer.error.not-unique-ticker= The ticker must be unique
+consumer.offer.form.labbel.confirm= Confirm create
+consumer.requests.error.must-confirm= Must confirm create
