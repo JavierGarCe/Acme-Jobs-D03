@@ -1,7 +1,9 @@
 
 package acme.features.consumer;
 
+import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -66,37 +68,41 @@ public class ConsumerOfferCreateService implements AbstractCreateService<Consume
 		assert entity != null;
 		assert errors != null;
 
+		Calendar calendar;
+		Date present;
 		Boolean isConfirmed = request.getModel().getBoolean("confirm");
 		errors.state(request, isConfirmed, "confirm", "consumer.requests.error.must-confirm");
 
-		if (entity.getDeadline() != null) {
-			boolean isDeadlineFuture = entity.getDeadline().after(new Date(System.currentTimeMillis()));
+		if (!errors.hasErrors("deadline")) {
+			calendar = new GregorianCalendar();
+			present = calendar.getTime();
+			boolean isDeadlineFuture = entity.getDeadline().after(present);
 			errors.state(request, isDeadlineFuture, "deadline", "consumer.offer.error.not-future-deadline");
 		}
 		Money minReward = entity.getMinReward();
 		Money maxReward = entity.getMaxReward();
-		if (minReward != null) {
+		if (!errors.hasErrors("minReward")) {
 			boolean isPositive = minReward.getAmount() > 0;
 			errors.state(request, isPositive, "minReward", "consumer.offer.error.not-positive-minReward");
 			boolean isEUR = minReward.getCurrency().equals("EUR");
 			errors.state(request, isEUR, "minReward", "consumer.offer.error.not-EUR-minReward");
 		}
-		if (maxReward != null) {
+		if (!errors.hasErrors("maxReward")) {
 			boolean isPositive = maxReward.getAmount() > 0;
 			errors.state(request, isPositive, "maxReward", "consumer.offer.error.not-positive-maxReward");
 			boolean isEUR = maxReward.getCurrency().equals("EUR");
 			errors.state(request, isEUR, "maxReward", "consumer.offer.error.not-EUR-maxReward");
 
 		}
-		if (minReward != null && maxReward != null) {
+		if (!errors.hasErrors("minReward") && !errors.hasErrors("maxReward")) {
 			boolean isGreater = maxReward.getAmount() > minReward.getAmount();
 			errors.state(request, isGreater, "maxReward", "consumer.offer.error.not-greater-maxReward");
 			errors.state(request, isGreater, "minReward", "consumer.offer.error.not-greater-maxReward");
 		}
-
-		boolean isUnique = !this.repository.findManyAll().stream().anyMatch(i -> i.getTicker().equals(entity.getTicker()));
-		errors.state(request, isUnique, "ticker", "consumer.offer.error.not-unique-ticker");
-
+		if (!errors.hasErrors("ticker")) {
+			boolean isUnique = !this.repository.findManyAll().stream().anyMatch(i -> i.getTicker().equals(entity.getTicker()));
+			errors.state(request, isUnique, "ticker", "consumer.offer.error.not-unique-ticker");
+		}
 	}
 
 	@Override
