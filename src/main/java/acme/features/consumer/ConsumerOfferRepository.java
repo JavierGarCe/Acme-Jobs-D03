@@ -14,6 +14,8 @@ public interface ConsumerOfferRepository extends AbstractRepository {
 
 	@Query("select o from Offer o where o.id = ?1")
 	Offer findOneById(int id);
+	@Query("select o from Offer o where o.ticker = ?1")
+	Offer findOneByTicker(String ticker);
 
 	@Query("select o from Offer o")
 	Collection<Offer> findManyAll();

@@ -100,7 +100,7 @@ public class ConsumerOfferCreateService implements AbstractCreateService<Consume
 			errors.state(request, isGreater, "minReward", "consumer.offer.error.not-greater-maxReward");
 		}
 		if (!errors.hasErrors("ticker")) {
-			boolean isUnique = !this.repository.findManyAll().stream().anyMatch(i -> i.getTicker().equals(entity.getTicker()));
+			boolean isUnique = this.repository.findOneByTicker(entity.getTicker()) == null;
 			errors.state(request, isUnique, "ticker", "consumer.offer.error.not-unique-ticker");
 		}
 	}
