@@ -1,7 +1,9 @@
 
 package acme.features.provider.requests;
 
+import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -69,12 +71,14 @@ public class ProviderRequestsCreateService implements AbstractCreateService<Prov
 		assert errors != null;
 
 		Boolean isConfirmed, isDuplicated, currencyValid, deadlineValid, amountPositive;
+		Calendar calendar;
+
 		isConfirmed = request.getModel().getBoolean("confirm");
 		errors.state(request, isConfirmed, "confirm", "provider.requests.error.must-confirm");
 		isDuplicated = this.repository.findOnebyTicker(entity.getTicker()) != null;
 		errors.state(request, !isDuplicated, "ticker", "provider.ticker.error.duplicated");
 
-		if (entity.getReward() != null) {
+		if (!errors.hasErrors("reward")) {
 			currencyValid = entity.getReward().getCurrency().equals("EUR");
 			errors.state(request, currencyValid, "reward", "provider.reward.error.currency");
 
@@ -82,8 +86,9 @@ public class ProviderRequestsCreateService implements AbstractCreateService<Prov
 			errors.state(request, amountPositive, "reward", "provider.reward.error.amount");
 
 		}
-		if (entity.getDeadline() != null) {
-			deadlineValid = entity.getDeadline().after(new Date(System.currentTimeMillis()));
+		if (!errors.hasErrors("deadline")) {
+			calendar = new GregorianCalendar();
+			deadlineValid = entity.getDeadline().after(calendar.getTime());
 			errors.state(request, deadlineValid, "deadline", "provider.deadline.error.future");
 		}
 
