@@ -203,8 +203,8 @@
 		<property name="moment" value="2019/10/26 20:00"/>
 		<property name="deadline" value="2019/10/30 20:00"/>
 		<property name="description" value="Acme description"/>
-		<property name="minReward" value="€ 1950"/>
-		<property name="maxReward" value="€ 2150"/>
+		<property name="minReward" value="1950 EUR"/>
+		<property name="maxReward" value="2150 EUR"/>
 		<property name="ticker" value="OTYRQ-11254"/>
 	</bean>
 	
@@ -213,8 +213,8 @@
 		<property name="moment" value="2019/09/13 21:00"/>
 		<property name="deadline" value="2019/11/14 20:00"/>
 		<property name="description" value="Test description"/>
-		<property name="minReward" value="€ 1800"/>
-		<property name="maxReward" value="€ 1960"/>
+		<property name="minReward" value="1800 EUR"/>
+		<property name="maxReward" value="1960 EUR"/>
 		<property name="ticker" value="OUYIM-36695"/>
 	</bean>
 	
@@ -223,8 +223,8 @@
 		<property name="moment" value="2019/10/24 15:30"/>
 		<property name="deadline" value="2020/02/26 00:00"/>
 		<property name="description" value="Fake description"/>
-		<property name="minReward" value="€ 1500"/>
-		<property name="maxReward" value="€ 1600"/>
+		<property name="minReward" value="1500 EUR"/>
+		<property name="maxReward" value="1600 EUR"/>
 		<property name="ticker" value="OLSSW-12258"/>
 	</bean>
 	
@@ -233,8 +233,8 @@
 		<property name="moment" value="2019/10/24 15:30"/>
 		<property name="deadline" value="2019/10/26 00:00"/>
 		<property name="description" value="Fake description"/>
-		<property name="minReward" value="€ 100"/>
-		<property name="maxReward" value="€ 200"/>	
+		<property name="minReward" value="100 EUR"/>
+		<property name="maxReward" value="200 EUR"/>	
 		<property name="ticker" value="OKJGH-12544"/>
 	</bean>
 	

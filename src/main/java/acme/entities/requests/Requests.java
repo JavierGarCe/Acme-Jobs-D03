@@ -5,9 +5,12 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Index;
+import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Pattern;
 
@@ -19,6 +22,9 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
+@Table(indexes = {
+	@Index(columnList = "deadline"), @Index(columnList = "ticker")
+})
 public class Requests extends DomainEntity {
 
 	// Serialisation identifier -----------------------------------------------
@@ -33,6 +39,7 @@ public class Requests extends DomainEntity {
 	@NotBlank
 	private String				moreInfo;
 
+	@NotNull
 	private Money				reward;
 
 	@NotBlank
@@ -40,6 +47,7 @@ public class Requests extends DomainEntity {
 	@Column(unique = true)
 	private String				ticker;
 
+	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date				deadline;
 

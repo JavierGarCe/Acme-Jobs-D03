@@ -71,6 +71,7 @@
 			<acme:menu-suboption code="master.menu.administrator.listAnnouncements" action="/administrator/announcement/list"/>
 		<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.listCommercialBanners" action="/administrator/commercial-banner/list"/>
+			<acme:menu-suboption code="master.menu.administrator.createCommercialBanners" action="/administrator/commercial-banner/create"/>
 		<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.listNonCommercialBanners" action="/administrator/non-commercial-banner/list"/>
 	  <acme:menu-separator/>
@@ -81,18 +82,24 @@
 			<acme:menu-suboption code="master.menu.administrator.listCompanyRecords" action="/administrator/company-record/list-top"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.listInvestorRecords" action="/administrator/investor-record/list-top"/>
+			<acme:menu-suboption code="master.menu.administrator.listAllInvestorRecords" action="/administrator/investor-record/list-all"/>
+			<acme:menu-suboption code="master.menu.administrator.createInvestorRecords" action="/administrator/investor-record/create"/>
 			 <acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.chart" action="/administrator/chart/show-chart"/>
 			 <acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.createNonCommercialBanner" action="/administrator/non-commercial-banner/create"/>
 		</acme:menu-option>
 
-		<acme:menu-option code="master.menu.provider" access="hasRole('Provider')">
-			<acme:menu-suboption code="master.menu.provider.favourite-link" action="http://www.example.com/" />
+		<acme:menu-option code="master.menu.provider" access="hasRole('Provider')">		
+			<acme:menu-suboption code="master.menu.provider.requests.create" action="/provider/requests/create" />
+			<acme:menu-suboption code="master.menu.provider.requests.list" action="/provider/requests/list" />
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.consumer" access="hasRole('Consumer')">
 			<acme:menu-suboption code="master.menu.consumer.favourite-link" action="http://www.example.com/" />
+			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.consumer.createOffer" action="/consumer/offer/create" />
+			
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">

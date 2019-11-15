@@ -83,22 +83,28 @@ master.menu.administrator.dashboard = Lista de indicadores
 master.menu.administrator.customization = Customización
 
 master.menu.administrator.listCommercialBanners = Listar banners comerciales
+master.menu.administrator.createCommercialBanners = Crear banner comercial
 
 master.menu.administrator.listNonCommercialBanners = Listar banners no comerciales
 
 master.menu.administrator.createNonCommercialBanner = Crear banners no comerciales
+master.menu.administrator.listAllInvestorRecords = Listar todos los inversores
+
+master.menu.administrator.createInvestorRecords = Crear inversor
 
 master.menu.administrator.chart = Gráfico
 
 # master.menu.provider ########################################################
 
 master.menu.provider = Proveedor
-master.menu.provider.favourite-link = Enlace favorito
+master.menu.provider.requests.list = Lista de peticiones
+master.menu.provider.requests.create = Crear una petición
 
 # master.menu.consumer ##########################################################
 
 master.menu.consumer = Consumidor
 master.menu.consumer.favourite-link = Enlace favorito
+master.menu.consumer.createOffer = Crear nueva oferta
 
 # master.menu.user-account ####################################################
 
