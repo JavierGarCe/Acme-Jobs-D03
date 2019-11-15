@@ -91,7 +91,8 @@ master.menu.administrator.chart = Gráfico
 # master.menu.provider ########################################################
 
 master.menu.provider = Proveedor
-master.menu.provider.favourite-link = Enlace favorito
+master.menu.provider.requests.list = Lista de peticiones
+master.menu.provider.requests.create = Crear una petición
 
 # master.menu.consumer ##########################################################
 
