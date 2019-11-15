@@ -15,9 +15,6 @@ public interface AdministratorInvestorRecordRepository extends AbstractRepositor
 	@Query("select h from InvestorRecord h where h.id = ?1")
 	InvestorRecord findOneById(int id);
 
-	@Query("select h from InvestorRecord h where h.stars = 5")
-	Collection<InvestorRecord> findTop();
-
 	@Query("select h from InvestorRecord h")
 	Collection<InvestorRecord> findManyAll();
 
