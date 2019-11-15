@@ -75,6 +75,7 @@
 			<acme:menu-suboption code="master.menu.administrator.createCommercialBanners" action="/administrator/commercial-banner/create"/>
 		<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.listNonCommercialBanners" action="/administrator/non-commercial-banner/list"/>
+			<acme:menu-suboption code="master.menu.administrator.createNonCommercialBanner" action="/administrator/non-commercial-banner/create"/>
 	  <acme:menu-separator/>
 	  		<acme:menu-suboption code="master.menu.administrator.customization" action="/administrator/customization/list"/>	
     <acme:menu-separator/>
@@ -90,8 +91,7 @@
 			<acme:menu-suboption code="master.menu.administrator.createCompanyRecords" action="/administrator/company-record/create"/>
 			 <acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.chart" action="/administrator/chart/show-chart"/>
-			 <acme:menu-separator/>
-			<acme:menu-suboption code="master.menu.administrator.createNonCommercialBanner" action="/administrator/non-commercial-banner/create"/>
+			
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.provider" access="hasRole('Provider')">		
