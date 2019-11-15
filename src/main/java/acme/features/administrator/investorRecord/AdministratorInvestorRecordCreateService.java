@@ -62,7 +62,7 @@ public class AdministratorInvestorRecordCreateService implements AbstractCreateS
 
 		Money money = entity.getInvestingStatement();
 
-		if (money != null) {
+		if (!errors.hasErrors("investingStatement")) {
 			Boolean isEuros, isPositive;
 
 			isEuros = money.getCurrency().equals("EUR");

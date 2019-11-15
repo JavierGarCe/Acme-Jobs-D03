@@ -65,7 +65,7 @@ public class AdministratorInvestorRecordUpdateService implements AbstractUpdateS
 
 		Money money = entity.getInvestingStatement();
 
-		if (money != null) {
+		if (!errors.hasErrors("investingStatement")) {
 			Boolean isEuros, isPositive;
 
 			isEuros = money.getCurrency().equals("EUR");
