@@ -12,6 +12,7 @@ administrator.customization.form.label.spamword = Palabras spam:
 administrator.customization.form.label.threshold = Umbral de spam:
 		
 administrator.customization.form.button.return = Volver
+administrator.customization.form.button.update = Actualizar
 
 administrator.customization.list.label.spamword = Palabras spam
 administrator.customization.list.label.threshold = Umbral de spam

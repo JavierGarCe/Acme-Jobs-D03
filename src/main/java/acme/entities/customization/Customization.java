@@ -3,6 +3,7 @@ package acme.entities.customization;
 
 import javax.persistence.Entity;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.Range;
 
@@ -20,6 +21,7 @@ public class Customization extends DomainEntity {
 	 */
 	private static final long	serialVersionUID	= 1L;
 
+	@NotNull
 	@Range(min = 0, max = 100)
 	private Double				threshold;
 

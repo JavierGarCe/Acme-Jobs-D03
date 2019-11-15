@@ -17,12 +17,13 @@
 	"http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 
 <tiles-definitions>
-	<definition name="administrator/customization/form" extends="master">
-		<put-attribute name="body" type="template" value="../administrator/customization/form.jsp" />
-	</definition>
-
+	
 	<definition name="administrator/customization/list" extends="master">
 		<put-attribute name="body" type="template" value="../administrator/customization/list.jsp" />
 	</definition>
+	<definition name="administrator/customization/form" extends="master">
+		<put-attribute name="body" type="template" value="../administrator/customization/form.jsp" />
+	</definition>
+	
 
 </tiles-definitions>
