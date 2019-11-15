@@ -83,6 +83,7 @@ master.menu.administrator.dashboard = Lista de indicadores
 master.menu.administrator.customization = Customización
 
 master.menu.administrator.listCommercialBanners = Listar banners comerciales
+master.menu.administrator.createCommercialBanners = Crear banner comercial
 
 master.menu.administrator.listNonCommercialBanners = Listar banners no comerciales
 

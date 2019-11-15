@@ -7,3 +7,7 @@ administrator.banner.commercial.form.label.targetUrl = URL imagen:
 administrator.banner.commercial.form.label.creditCard = Número tarjeta de crédito:
 
 administrator.banner.commercial.form.button.return = Volver
+
+administrator.commercial-banner.form.button.update = Actualizar
+administrator.commercial-banner.form.button.delete = Eliminar
+administrator.commercial-banner.form.button.create = Crear
