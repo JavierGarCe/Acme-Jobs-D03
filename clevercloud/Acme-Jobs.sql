@@ -56,7 +56,8 @@ CREATE TABLE `announcement` (
   `more_info` varchar(255) DEFAULT NULL,
   `text` varchar(255) DEFAULT NULL,
   `title` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  KEY `IDXnhikaa2dj3la6o2o7e9vo01y0` (`moment`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -143,7 +144,8 @@ CREATE TABLE `challenge` (
   `silver_goal` varchar(255) DEFAULT NULL,
   `silver_reward` varchar(255) DEFAULT NULL,
   `title` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  KEY `IDXnr284tes3x8hnd3h716tmb3fr` (`deadline`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -204,7 +206,8 @@ CREATE TABLE `company_record` (
   `sector` varchar(255) DEFAULT NULL,
   `stars` int(11) DEFAULT NULL,
   `website` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  KEY `IDX9pkce3d1y6w47wadap5s5xptc` (`stars`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -420,7 +423,8 @@ CREATE TABLE `investor_record` (
   `name` varchar(255) DEFAULT NULL,
   `sector` varchar(255) DEFAULT NULL,
   `stars` int(11) DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  KEY `IDXk2t3uthe649ao1jllcuks0gv4` (`stars`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -430,7 +434,7 @@ CREATE TABLE `investor_record` (
 
 LOCK TABLES `investor_record` WRITE;
 /*!40000 ALTER TABLE `investor_record` DISABLE KEYS */;
-INSERT INTO `investor_record` VALUES (35,0,10000,'EUR','Juan Guzmán','Medicina',4),(36,0,40000,'EUR','Fran Perejón','Automovil',5),(37,0,800,'EUR','Leslie','Ingeniería',1),(38,0,800,'EUR','re','43',5);
+INSERT INTO `investor_record` VALUES (35,0,10000,'EUR','Juan Guzmán','Medicina',4),(36,0,40000,'EUR','Fran Perejón','Automovil',5),(37,0,800,'EUR','Leslie','Ingeniería',1),(38,0,800,'EUR','Leslie','Test sector',1);
 /*!40000 ALTER TABLE `investor_record` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -482,7 +486,8 @@ CREATE TABLE `offer` (
   `ticker` varchar(255) DEFAULT NULL,
   `title` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `UK_iex7e8fs0fh89yxpcnm1orjkm` (`ticker`)
+  UNIQUE KEY `UK_iex7e8fs0fh89yxpcnm1orjkm` (`ticker`),
+  KEY `IDXq2o9psuqfuqmq59f0sq57x9uf` (`deadline`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -492,7 +497,7 @@ CREATE TABLE `offer` (
 
 LOCK TABLES `offer` WRITE;
 /*!40000 ALTER TABLE `offer` DISABLE KEYS */;
-INSERT INTO `offer` VALUES (28,0,'2019-10-30 19:00:00.000000','Acme description',2150,'€',1950,'€','2019-10-26 18:00:00.000000','OTYRQ-11254','Acme offer'),(29,0,'2019-11-14 19:00:00.000000','Test description',1960,'€',1800,'€','2019-09-13 19:00:00.000000','OUYIM-36695','Test offer'),(30,0,'2020-02-25 23:00:00.000000','Fake description',1600,'€',1500,'€','2019-10-24 13:30:00.000000','OLSSW-12258','Offer 3'),(31,0,'2019-10-25 22:00:00.000000','Fake description',200,'€',100,'€','2019-10-24 13:30:00.000000','OKJGH-12544','Timed out offer');
+INSERT INTO `offer` VALUES (28,0,'2019-10-30 19:00:00.000000','Acme description',2150,'EUR',1950,'EUR','2019-10-26 18:00:00.000000','OTYRQ-11254','Acme offer'),(29,0,'2019-11-14 19:00:00.000000','Test description',1960,'EUR',1800,'EUR','2019-09-13 19:00:00.000000','OUYIM-36695','Test offer'),(30,0,'2020-02-25 23:00:00.000000','Fake description',1600,'EUR',1500,'EUR','2019-10-24 13:30:00.000000','OLSSW-12258','Offer 3'),(31,0,'2019-10-25 22:00:00.000000','Fake description',200,'EUR',100,'EUR','2019-10-24 13:30:00.000000','OKJGH-12544','Timed out offer');
 /*!40000 ALTER TABLE `offer` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -569,7 +574,9 @@ CREATE TABLE `requests` (
   `ticker` varchar(255) DEFAULT NULL,
   `title` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `UK_5v1h0kdr8vcps4i9e55k5gnc8` (`ticker`)
+  UNIQUE KEY `UK_5v1h0kdr8vcps4i9e55k5gnc8` (`ticker`),
+  KEY `IDXmly5kwrpgadjkxv5t5dgw36hr` (`deadline`),
+  KEY `IDX2ijmvvrwi2t1isu2m2ncm5qn1` (`ticker`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -665,7 +672,7 @@ CREATE TABLE `user_account` (
 
 LOCK TABLES `user_account` WRITE;
 /*!40000 ALTER TABLE `user_account` DISABLE KEYS */;
-INSERT INTO `user_account` VALUES (1,0,_binary '\0','john.doe@acme.com','John','Doe','$2a$05$Fo9he68Uloi7F5UWZ4Jpbu6ZahjSn319flmDu8wtfW1sM.hhchVV.','anonymous'),(3,0,_binary '','administrator@acme.com','Administrator','Acme.com','$2a$05$55w5MnNhQHkf08T88lP1Oua7XU83gJtoGmTc6Xi/M21AiFY8Nd3U.','administrator');
+INSERT INTO `user_account` VALUES (1,0,_binary '\0','john.doe@acme.com','John','Doe','$2a$05$TdCDjqeSGF8mpVs2kvlj8unZYrPsarkR4.txV/zEC.O6ngxHcdGzu','anonymous'),(3,0,_binary '','administrator@acme.com','Administrator','Acme.com','$2a$05$1tABS5n83dzEzQ9Mg0nN7.gwGtxO/x1H2.CA6tAU5yttzFQmn2FkK','administrator');
 /*!40000 ALTER TABLE `user_account` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -678,4 +685,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-11-05 18:21:40
+-- Dump completed on 2019-11-15 15:17:17
