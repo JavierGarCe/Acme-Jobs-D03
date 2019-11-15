@@ -15,11 +15,22 @@
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
-<acme:form readonly="true">
-	<acme:form-textbox code="administrator.investor-record.form.label.name" path="name"/>
+<acme:form>
+	<acme:form-textbox code="administrator.investor-record.form.label.name" path="name" />
 	<acme:form-textbox code="administrator.investor-record.form.label.sector" path="sector" />
-	<acme:form-money code="administrator.investor-record.form.label.investingStatement" path="investingStatement"/>
-	<acme:form-integer code="administrator.investor-record.form.label.stars" path="stars"/>
-		
-  	<acme:form-return code="administrator.investor-record.form.button.return"/>
+	<acme:form-money code="administrator.investor-record.form.label.investingStatement" path="investingStatement" />
+	<acme:form-integer code="administrator.investor-record.form.label.stars" path="stars" />
+
+	<acme:form-submit test="${command == 'show' }" code="administrator.investorRecord.button.update"
+		action="/administrator/investor-record/update" />
+	<acme:form-submit test="${command == 'show' }" code="administrator.investorRecord.button.delete"
+		action="/administrator/investor-record/delete" />
+	<acme:form-submit test="${command == 'create' }" code="administrator.investorRecord.button.create"
+		action="/administrator/investor-record/create" />
+	<acme:form-submit test="${command == 'update' }" code="administrator.investorRecord.button.update"
+		action="/administrator/investor-record/update" />
+	<acme:form-submit test="${command == 'delete' }" code="administrator.investorRecord.button.delete"
+		action="/administrator/investor-record/delete" />
+
+	<acme:form-return code="administrator.investor-record.form.button.return" />
 </acme:form>

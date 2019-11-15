@@ -15,5 +15,5 @@ package acme.components;
 import acme.framework.components.Command;
 
 public enum CustomCommand implements Command {
-	LIST_TOP, LIST_DATE, SHOW_CHART
+	LIST_TOP, LIST_DATE, SHOW_CHART, LIST_ALL
 }

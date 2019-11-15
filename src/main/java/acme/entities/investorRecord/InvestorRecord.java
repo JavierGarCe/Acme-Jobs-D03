@@ -3,6 +3,7 @@ package acme.entities.investorRecord;
 
 import javax.persistence.Entity;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.Range;
 
@@ -28,6 +29,7 @@ public class InvestorRecord extends DomainEntity {
 	@NotBlank
 	private String				sector;
 
+	@NotNull
 	private Money				investingStatement;
 
 	@Range(min = 0, max = 5)
