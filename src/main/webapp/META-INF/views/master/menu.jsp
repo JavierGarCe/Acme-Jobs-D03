@@ -79,10 +79,12 @@
     <acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.dashboard" action="/administrator/dashboard/show"/>
   <acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.administrator.listChallenge" action="/administrator/challenge/list" />
+			<acme:menu-suboption code="master.menu.administrator.createChallenge" action="/administrator/challenge/create" />
+  <acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.listAllInvestorRecords" action="/administrator/investor-record/list-all"/>
 			<acme:menu-suboption code="master.menu.administrator.createInvestorRecords" action="/administrator/investor-record/create"/>
-
-			 <acme:menu-separator/>
+	<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.chart" action="/administrator/chart/show-chart"/>
 			 <acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.createNonCommercialBanner" action="/administrator/non-commercial-banner/create"/>
