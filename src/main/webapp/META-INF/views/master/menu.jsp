@@ -86,7 +86,8 @@
 			<acme:menu-suboption code="master.menu.administrator.createInvestorRecords" action="/administrator/investor-record/create"/>
 			 <acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.chart" action="/administrator/chart/show-chart"/>
-			 
+			 <acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.administrator.createNonCommercialBanner" action="/administrator/non-commercial-banner/create"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.provider" access="hasRole('Provider')">		

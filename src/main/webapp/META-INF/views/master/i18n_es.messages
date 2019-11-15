@@ -87,6 +87,7 @@ master.menu.administrator.createCommercialBanners = Crear banner comercial
 
 master.menu.administrator.listNonCommercialBanners = Listar banners no comerciales
 
+master.menu.administrator.createNonCommercialBanner = Crear banners no comerciales
 master.menu.administrator.listAllInvestorRecords = Listar todos los inversores
 
 master.menu.administrator.createInvestorRecords = Crear inversor

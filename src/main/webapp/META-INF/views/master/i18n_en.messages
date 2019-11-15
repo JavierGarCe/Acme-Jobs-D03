@@ -88,9 +88,12 @@ master.menu.administrator.createCommercialBanners = Create commercial banner
 
 master.menu.administrator.listNonCommercialBanners = List non commercial banners
 
+master.menu.administrator.createNonCommercialBanner = Create non commercial banners
+
 master.menu.administrator.listAllInvestorRecords = List all investor records
 
 master.menu.administrator.createInvestorRecords = Create investor record
+
 
 master.menu.administrator.chart = Chart
 
