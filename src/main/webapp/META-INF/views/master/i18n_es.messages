@@ -75,11 +75,15 @@ master.menu.authenticated.challenge = Lista de desafíos
 master.menu.administrator = Administrador
 master.menu.administrator.user-accounts = Cuentas de usuario
 master.menu.administrator.shutdown = Parar el sistema
-
+master.menu.administrator.createAnnouncements = Crear anuncio
 master.menu.administrator.listAnnouncements = Listar anuncios
 master.menu.administrator.listCompanyRecords = Listar registros de compañías
 master.menu.administrator.listInvestorRecords = Listar los mejores registros de inversores
 master.menu.administrator.createCompanyRecords = Crear un nuevo registro de compañía
+
+master.menu.administrator.listChallenge = Lista de retos
+master.menu.administrator.createChallenge = Crear un reto
+
 
 master.menu.administrator.dashboard = Lista de indicadores 
 

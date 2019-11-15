@@ -68,6 +68,7 @@
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.shutdown" action="/master/shutdown"/>
       <acme:menu-separator/>
+      		<acme:menu-suboption code="master.menu.administrator.createAnnouncements" action="/administrator/announcement/create"/>
 			<acme:menu-suboption code="master.menu.administrator.listAnnouncements" action="/administrator/announcement/list"/>
 		<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.listCommercialBanners" action="/administrator/commercial-banner/list"/>
@@ -78,6 +79,9 @@
 	  		<acme:menu-suboption code="master.menu.administrator.customization" action="/administrator/customization/list"/>	
     <acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.dashboard" action="/administrator/dashboard/show"/>
+  <acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.administrator.listChallenge" action="/administrator/challenge/list" />
+			<acme:menu-suboption code="master.menu.administrator.createChallenge" action="/administrator/challenge/create" />
   <acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.listAllInvestorRecords" action="/administrator/investor-record/list-all"/>
 			<acme:menu-suboption code="master.menu.administrator.createInvestorRecords" action="/administrator/investor-record/create"/>

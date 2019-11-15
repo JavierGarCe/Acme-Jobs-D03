@@ -18,7 +18,7 @@ import acme.framework.entities.Administrator;
 public class AdministratorInvestorRecordController extends AbstractController<Administrator, InvestorRecord> {
 
 	@Autowired
-	private AdministratorInvestorRecordListTopService	listTopService;
+	private AdministratorInvestorRecordListService	listTopService;
 
 	@Autowired
 	private AdministratorInvestorRecordListService		listService;
