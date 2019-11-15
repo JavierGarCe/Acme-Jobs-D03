@@ -18,16 +18,32 @@ import acme.framework.entities.Administrator;
 public class AdministratorInvestorRecordController extends AbstractController<Administrator, InvestorRecord> {
 
 	@Autowired
-	private AdministratorInvestorRecordListService	listService;
+	private AdministratorInvestorRecordListService	listTopService;
 
 	@Autowired
-	private AdministratorInvestorRecordShowService	showService;
+	private AdministratorInvestorRecordListService		listService;
+
+	@Autowired
+	private AdministratorInvestorRecordShowService		showService;
+
+	@Autowired
+	private AdministratorInvestorRecordCreateService	createService;
+
+	@Autowired
+	private AdministratorInvestorRecordUpdateService	updateService;
+
+	@Autowired
+	private AdministratorInvestorRecordDeleteService	deleteService;
 
 
 	@PostConstruct
 	private void initialise() {
-		super.addCustomCommand(CustomCommand.LIST_TOP, BasicCommand.LIST, this.listService);
+		super.addCustomCommand(CustomCommand.LIST_TOP, BasicCommand.LIST, this.listTopService);
+		super.addCustomCommand(CustomCommand.LIST_ALL, BasicCommand.LIST, this.listService);
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
+		super.addBasicCommand(BasicCommand.CREATE, this.createService);
+		super.addBasicCommand(BasicCommand.UPDATE, this.updateService);
+		super.addBasicCommand(BasicCommand.DELETE, this.deleteService);
 	}
 
 }

@@ -55,7 +55,8 @@ master.menu.anonymous.ganfornina-bulletin = Create GanforninaBulletin!
 master.menu.anonymous.listCompanyRecords = List Company Records
 master.menu.anonymous.listInvestorRecord = List Investor Records
 master.menu.anonymous.listAnnouncements = List Announcements
-
+master.menu.anonymous.listTopInvestorRecords = List top Investor Records
+master.menu.anonymous.listTopCompanyRecords = List top Company Records
 
 # master.menu.authenticated #################################################
 
@@ -87,20 +88,30 @@ master.menu.administrator.dashboard = List indicators
 master.menu.administrator.customization = Customization
 
 master.menu.administrator.listCommercialBanners = List commercial banners
+master.menu.administrator.createCommercialBanners = Create commercial banner
 
 master.menu.administrator.listNonCommercialBanners = List non commercial banners
+
+master.menu.administrator.createNonCommercialBanner = Create non commercial banners
+
+master.menu.administrator.listAllInvestorRecords = List all investor records
+
+master.menu.administrator.createInvestorRecords = Create investor record
+
 
 master.menu.administrator.chart = Chart
 
 # master.menu.provider ########################################################
 
 master.menu.provider = Provider
-master.menu.provider.favourite-link = Favourite link
+master.menu.provider.requests.list = List Requests
+master.menu.provider.requests.create = Create Request
 
 # master.menu.consumer ##########################################################
 
 master.menu.consumer = Consumer
 master.menu.consumer.favourite-link = Favourite link
+master.menu.consumer.createOffer = Create new offer
 
 # master.menu.user-account ####################################################
 

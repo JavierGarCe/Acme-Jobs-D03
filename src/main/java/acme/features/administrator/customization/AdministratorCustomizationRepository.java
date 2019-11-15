@@ -15,4 +15,7 @@ public interface AdministratorCustomizationRepository extends AbstractRepository
 	@Query("select s from Customization s")
 	Collection<Customization> findMany();
 
+	@Query("select c from Customization c where c.id = ?1")
+	Customization findOneById(int id);
+
 }
