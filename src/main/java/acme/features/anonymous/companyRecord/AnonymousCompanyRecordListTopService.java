@@ -1,5 +1,7 @@
 
-package acme.features.administrator.companyRecord;
+package acme.features.anonymous.companyRecord;
+
+import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -7,14 +9,14 @@ import org.springframework.stereotype.Service;
 import acme.entities.companyRecords.CompanyRecord;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
-import acme.framework.entities.Administrator;
-import acme.framework.services.AbstractShowService;
+import acme.framework.entities.Anonymous;
+import acme.framework.services.AbstractListService;
 
 @Service
-public class AdministratorCompanyRecordShowService implements AbstractShowService<Administrator, CompanyRecord> {
+public class AnonymousCompanyRecordListTopService implements AbstractListService<Anonymous, CompanyRecord> {
 
 	@Autowired
-	AdministratorCompanyRecordRepository repository;
+	AnonymousCompanyRecordRepository repository;
 
 
 	@Override
@@ -30,19 +32,17 @@ public class AdministratorCompanyRecordShowService implements AbstractShowServic
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "name", "sector", "ceo", "activities", "website", "phone", "incorporated", "stars", "email");
+		request.unbind(entity, model, "name", "sector", "activities", "website", "phone", "stars");
 
 	}
 
 	@Override
-	public CompanyRecord findOne(final Request<CompanyRecord> request) {
+	public Collection<CompanyRecord> findMany(final Request<CompanyRecord> request) {
 		assert request != null;
 
-		CompanyRecord result;
-		int id;
+		Collection<CompanyRecord> result;
 
-		id = request.getModel().getInteger("id");
-		result = this.repository.findOneById(id);
+		result = this.repository.findTop();
 
 		return result;
 	}

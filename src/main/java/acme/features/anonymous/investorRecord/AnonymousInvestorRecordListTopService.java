@@ -1,5 +1,7 @@
 
-package acme.features.administrator.investorRecord;
+package acme.features.anonymous.investorRecord;
+
+import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -7,14 +9,14 @@ import org.springframework.stereotype.Service;
 import acme.entities.investorRecord.InvestorRecord;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
-import acme.framework.entities.Administrator;
-import acme.framework.services.AbstractShowService;
+import acme.framework.entities.Anonymous;
+import acme.framework.services.AbstractListService;
 
 @Service
-public class AdministratorInvestorRecordShowService implements AbstractShowService<Administrator, InvestorRecord> {
+public class AnonymousInvestorRecordListTopService implements AbstractListService<Anonymous, InvestorRecord> {
 
 	@Autowired
-	private AdministratorInvestorRecordRepository repository;
+	AnonymousInvestorRecordRepository repository;
 
 
 	@Override
@@ -30,19 +32,16 @@ public class AdministratorInvestorRecordShowService implements AbstractShowServi
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "name", "sector", "investingStatement", "stars");
+		request.unbind(entity, model, "name", "sector", "stars");
 
 	}
 
 	@Override
-	public InvestorRecord findOne(final Request<InvestorRecord> request) {
+	public Collection<InvestorRecord> findMany(final Request<InvestorRecord> request) {
 		assert request != null;
-		InvestorRecord result;
-		int id;
-		id = request.getModel().getInteger("id");
-		result = this.repository.findOneById(id);
+		Collection<InvestorRecord> result;
 
+		result = this.repository.findTop();
 		return result;
 	}
-
 }

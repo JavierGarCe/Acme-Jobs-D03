@@ -55,6 +55,8 @@ master.menu.anonymous.ganfornina-bulletin = ¡Crear Boletin Ganfornina!
 master.menu.anonymous.listCompanyRecords = Listar registros de compañías
 master.menu.anonymous.listInvestorRecord = Lista de registros inversores
 master.menu.anonymous.listAnnouncements = Listar anuncios
+master.menu.anonymous.listTopInvestorRecords = Listar top registros de inversores
+master.menu.anonymous.listTopCompanyRecords = Listar top registros de compañías
 
 # master.menu.authenticated #################################################
 
