@@ -17,9 +17,9 @@ consumer.offer.form.button.create = Crear
 
 consumer.offer.error.blank-deadline= La fecha límite no debe estar vacía
 consumer.offer.error.not-future-deadline= La fecha límite debe estar en el futuro
-consumer.offer.error.not-positive-minReward= La cantidad de dinero debe ser positiva
+consumer.offer.error.not-positive-minReward= La cantidad de dinero debe ser mayor que 0
 consumer.offer.error.not-EUR-minReward= La divisa debe ser EUR
-consumer.offer.error.not-positive-maxReward= La cantidad de dinero debe ser positiva
+consumer.offer.error.not-positive-maxReward= La cantidad de dinero debe ser mayor que 0
 consumer.offer.error.not-EUR-maxReward= La divisa debe ser EUR
 consumer.offer.error.not-greater-maxReward=La recompensa máxima debe ser mayor que la mínima
 consumer.offer.error.not-unique-ticker= El código debe ser único
