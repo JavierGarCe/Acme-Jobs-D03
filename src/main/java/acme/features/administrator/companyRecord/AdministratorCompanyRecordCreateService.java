@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 
 import acme.entities.companyRecords.CompanyRecord;
 import acme.framework.components.Errors;
+import acme.framework.components.HttpMethod;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Administrator;
@@ -43,6 +44,11 @@ public class AdministratorCompanyRecordCreateService implements AbstractCreateSe
 
 		request.unbind(entity, model, "name", "sector", "ceo", "activities", "website", "phone", "incorporated", "stars", "email");
 
+		if (request.isMethod(HttpMethod.GET)) {
+			model.setAttribute("incorporated", "false");
+		} else {
+			request.transfer(model, "incorporated");
+		}
 	}
 
 	@Override
