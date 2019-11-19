@@ -7,7 +7,7 @@
 	<acme:form-textbox code="provider.requests.form.label.title" path="title" />
 	<acme:form-textarea code="provider.requests.form.label.moreInfo" path="moreInfo" />
 	<acme:form-money code="provider.requests.form.label.reward" path="reward"/>
-	<acme:form-textbox code="provider.requests.form.label.ticker" path="ticker" />
+	<acme:form-textbox code="provider.requests.form.label.ticker" path="ticker" placeholder="RAAAA-99999"/>
 	<acme:form-moment code="provider.requests.form.label.deadline" path="deadline" />
 	<acme:form-checkbox code="provider.requests.form.label.confirm" path="confirm"/>
 	

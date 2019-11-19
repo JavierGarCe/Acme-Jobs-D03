@@ -99,8 +99,6 @@
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.consumer" access="hasRole('Consumer')">
-			<acme:menu-suboption code="master.menu.consumer.favourite-link" action="http://www.example.com/" />
-			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.consumer.createOffer" action="/consumer/offer/create" />
 			
 		</acme:menu-option>

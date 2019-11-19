@@ -227,6 +227,7 @@ create index IDXnr284tes3x8hnd3h716tmb3fr on `challenge` (`deadline`);
 create index IDX9pkce3d1y6w47wadap5s5xptc on `company_record` (`stars`);
 create index IDXk2t3uthe649ao1jllcuks0gv4 on `investor_record` (`stars`);
 create index IDXq2o9psuqfuqmq59f0sq57x9uf on `offer` (`deadline`);
+create index IDXcp4664f36sgqsd0ihmirt0w0 on `offer` (`ticker`);
 
     alter table `offer` 
        add constraint UK_iex7e8fs0fh89yxpcnm1orjkm unique (`ticker`);

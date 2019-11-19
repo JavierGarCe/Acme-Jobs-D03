@@ -22,6 +22,6 @@ consumer.offer.error.not-EUR-minReward= La divisa debe ser EUR
 consumer.offer.error.not-positive-maxReward= La cantidad de dinero debe ser positiva
 consumer.offer.error.not-EUR-maxReward= La divisa debe ser EUR
 consumer.offer.error.not-greater-maxReward=La recompensa máxima debe ser mayor que la mínima
-consumer.offer.error.not-unique-ticker= El ticker debe ser único
+consumer.offer.error.not-unique-ticker= El código debe ser único
 consumer.offer.form.labbel.confirm= Confirmar creación
 consumer.requests.error.must-confirm= Es necesario confirmar la creación

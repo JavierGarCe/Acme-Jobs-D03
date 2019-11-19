@@ -1,5 +1,5 @@
 
-package acme.features.consumer;
+package acme.features.consumer.offers;
 
 import java.util.Calendar;
 import java.util.Date;

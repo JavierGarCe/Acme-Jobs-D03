@@ -11,10 +11,10 @@
 	
 	<acme:form-moment code="consumer.offer.form.labbel.deadline" path="deadline"/>
 	<acme:form-textarea code="consumer.offer.form.label.description" path="description"/>
-	<acme:form-textbox code="consumer.offer.form.labbel.ticker" path="ticker"/>
+	<acme:form-textbox code="consumer.offer.form.labbel.ticker" path="ticker" placeholder="OAAAA-99999"/>
 	<acme:form-panel code="consumer.offer.form.panel.reward">
-	<acme:form-textbox code="consumer.offer.form.labbel.minReward" path="minReward"/>
-	<acme:form-textbox code="consumer.offer.form.labbel.maxReward" path="maxReward"/>
+	<acme:form-money code="consumer.offer.form.labbel.minReward" path="minReward"/>
+	<acme:form-money code="consumer.offer.form.labbel.maxReward" path="maxReward"/>
 	</acme:form-panel>
 	<acme:form-checkbox code="consumer.offer.form.labbel.confirm" path="confirm"/>
 	<acme:form-submit test="${command == 'create'}" code="consumer.offer.form.button.create" action="/consumer/offer/create"/>

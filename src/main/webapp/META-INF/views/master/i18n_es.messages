@@ -109,7 +109,6 @@ master.menu.provider.requests.create = Crear una petición
 # master.menu.consumer ##########################################################
 
 master.menu.consumer = Consumidor
-master.menu.consumer.favourite-link = Enlace favorito
 master.menu.consumer.createOffer = Crear nueva oferta
 
 # master.menu.user-account ####################################################
