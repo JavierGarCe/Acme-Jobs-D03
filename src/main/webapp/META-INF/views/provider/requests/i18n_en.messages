@@ -9,12 +9,6 @@ provider.requests.form.button.create = Create
 provider.requests.form.button.return = Return
 
 
-provider.requests.list.label.title = Title
-provider.requests.list.label.moreInfo = More Info
-provider.requests.list.label.reward = Reward
-provider.requests.list.label.ticker = Ticker
-provider.requests.list.label.deadline = Deadline
-
 provider.ticker.error.duplicated = This ticker is already taken
 provider.reward.error.currency = The reward must be at EUR (euros)
 provider.reward.error.amount = The amount of money must be positive 

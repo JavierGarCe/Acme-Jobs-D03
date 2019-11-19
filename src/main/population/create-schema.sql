@@ -222,9 +222,16 @@
         `nombre` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
+create index IDXnhikaa2dj3la6o2o7e9vo01y0 on `announcement` (`moment`);
+create index IDXnr284tes3x8hnd3h716tmb3fr on `challenge` (`deadline`);
+create index IDX9pkce3d1y6w47wadap5s5xptc on `company_record` (`stars`);
+create index IDXk2t3uthe649ao1jllcuks0gv4 on `investor_record` (`stars`);
+create index IDXq2o9psuqfuqmq59f0sq57x9uf on `offer` (`deadline`);
 
     alter table `offer` 
        add constraint UK_iex7e8fs0fh89yxpcnm1orjkm unique (`ticker`);
+create index IDXmly5kwrpgadjkxv5t5dgw36hr on `requests` (`deadline`);
+create index IDX2ijmvvrwi2t1isu2m2ncm5qn1 on `requests` (`ticker`);
 
     alter table `requests` 
        add constraint UK_5v1h0kdr8vcps4i9e55k5gnc8 unique (`ticker`);

@@ -19,16 +19,13 @@ public class ProviderRequestsController extends AbstractController<Provider, Req
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	private ProviderRequestsListService		listService;
-	@Autowired
-	private ProviderRequestsCreateService	createService;
+	private ProviderRequestsCreateService createService;
 
 
 	// Constructors -----------------------------------------------------------
 
 	@PostConstruct
 	private void initialise() {
-		super.addBasicCommand(BasicCommand.LIST, this.listService);
 		super.addBasicCommand(BasicCommand.CREATE, this.createService);
 
 	}

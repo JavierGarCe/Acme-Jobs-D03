@@ -47,7 +47,7 @@ public class CompanyRecord extends DomainEntity {
 	private String				phone;
 
 	@NotNull
-	private Boolean				incorporated;
+	private Boolean				incorporated		= false;
 
 	@Range(min = 0, max = 5)
 	private Integer				stars;

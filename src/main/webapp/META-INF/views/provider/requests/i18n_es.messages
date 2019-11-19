@@ -8,11 +8,6 @@ provider.requests.form.label.confirm = Confirmar la creación
 provider.requests.form.button.create = Crear
 provider.requests.form.button.return = Volver
 
-provider.requests.list.label.title = Título
-provider.requests.list.label.moreInfo = Más Información
-provider.requests.list.label.ticker = Código
-provider.requests.list.label.reward = Recompensa
-provider.requests.list.label.deadline = Fecha Límite
 
 provider.ticker.error.duplicated = Este código ya está en uso
 provider.reward.error.currency = La recompensa debe estar en EUR (euros)
